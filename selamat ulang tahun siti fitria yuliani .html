@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerbang Ulang Tahun Siti Fitria 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(180deg, #ffe6f2, #ffcce0);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      color: #ff1493;
+    }
+
+    h1 {
+      font-size: 3em;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2em;
+      width: 80%;
+      max-width: 500px;
+      margin-top: 10px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .flower {
+    position: absolute;
+    width: 60px;           /* ukuran lebih kecil */
+    height: 60px;
+    background: pink;
+    border-radius: 50%;
+    top: 30%;              /* posisinya agak atas */
+    left: 80%;
+    opacity: 0.5;          /* biar lembut */
+    box-shadow: 0 0 25px rgba(255, 182, 193, 0.7);
+    animation: bloom 3s ease-in-out infinite alternate;
+    z-index: 0;            /* di belakang teks */
+}
+
+.butterfly {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 60%;
+    left: 10%;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/6/6e/Butterfly_icon.svg') no-repeat center;
+    background-size: contain;
+    animation: fly 10s linear infinite;
+    z-index: 2;            /* di depan teks */
+}
+
+
+    .btn {
+      background: #ff66b2;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      margin-top: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+      animation: fadeIn 4s ease-in-out;
+    }
+
+    .btn:hover {
+      background: #ff1493;
+      transform: scale(1.05);
+    }
+
+    .date {
+      font-size: 1.4em;
+      margin-top: 15px;
+      animation: fadeIn 4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bloom {
+      from { transform: translate(-50%, -50%) scale(0.8); }
+      to { transform: translate(-50%, -50%) scale(1.2); }
+    }
+
+    @keyframes fly {
+      0% { top: 80%; left: 10%; }
+      25% { top: 50%; left: 30%; }
+      50% { top: 20%; left: 70%; }
+      75% { top: 60%; left: 90%; }
+      100% { top: 80%; left: 10%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="flower"></div>
+  <div class="butterfly"></div>
+
+  <h1>🎀 Happy Birthday Cantikk 🎀</h1>
+  <div class="date">30 Oktober 💖</div>
+
+  <p>Selamat bertambah usiaa nama yang indah, <b>Siti Fitria Yuliani</b> 💐<br>
+  Sehat selalu yaa, semoga segala impianmu tercapai tahun ini dan tahun-tahun kedepan 🌈<br>
+  Love u 💞</p>
+
+  <!-- Tombol lagu Spotify -->
+  <button class="btn" onclick="window.open('https://open.spotify.com/intl-id/track/5TpPSTItCwtZ8Sltr3vdzm?si=251cb705db1c4388')">
+    🎵 Dengar Lagu Spesial 🎶
+  </button>
+
+  <!-- Tombol lanjut ke halaman utama (gerbang kedua) -->
+  <button class="btn" onclick="showNextPage()">
+    💌 Buka Gerbang Ucapan 💌
+  </button>
+
+  <script>
+  function showNextPage() {
+    document.body.innerHTML = `
+      <div style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        background: linear-gradient(180deg, #ffe6f2, #ffcce0);
+        color: #ff1493;
+        font-family: 'Poppins', sans-serif;
+      ">
+        <h1 style="font-size:3em; margin-bottom:20px;">💐 Selamat Ulang Tahun 💐</h1>
+        <p style="font-size:1.2em; max-width:600px; animation: fadeIn 2s;">
+          Hari ini, dunia seindah senyummu.<br>
+          Terima kasih sudah hadir dan jadi cahaya di hidupku.<br><br>
+          <b>Siti Fitria Yuliani</b>, semoga hari ini berjalan menyenangkan buat kamu,<br>
+          aku doain kamu selalu sehat, bahagia, jaga diri yaa cantik..<br>
+          I'll always be here protect u 💖<br><br>
+          🌸 Selamat bertambah usia, terima kasih, sayang? 🌸
+        </p>
+      </div>
+    `;
+  }
+</script>
+</body>
+</html>
